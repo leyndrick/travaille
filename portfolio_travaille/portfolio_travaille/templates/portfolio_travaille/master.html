@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma présentation</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon portfolio</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'portfolio_travaille:home' %}">Accueil</a></li>
+            <li><a href="{% url 'portfolio_travaille:about' %}">À propos</a></li>
+            <li><a href="{% url 'portfolio_travaille:projects' %}">Projets</a></li>
+            <li><a href="{% url 'portfolio_travaille:contact' %}">Contact</a></li>
+        </ul>
+
+        {% block content %}
+        {% endblock %}
+
+
+    <footer>
+        <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
